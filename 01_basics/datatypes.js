@@ -11,7 +11,7 @@ let name = "vish" //string datatype ""
 let age = 21 //number datatype (range 2^53 or 52 bits)
 let isLoggedIn = true // boolean datatype 
 let state = null //null -> standalone value, representation of empty value 
-let marks; //undefined -> when value is not defined 
+let marks; //undefined -> when value of any variable is not defined 
 //symbol -> unique
 //object 
 
