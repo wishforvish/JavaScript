@@ -7,13 +7,14 @@
 
  //maintain the code readability high and no need to use semicolon ; all the time
 
-let name = "vish" //string datatype ""
-let age = 21 //number datatype (range 2^53 or 52 bits)
-let isLoggedIn = true // boolean datatype 
-let state = null //null -> standalone value, representation of empty value 
+let name = "vish" //string datatype ""; 2^53 - 1 elements
+let age = 21 //number datatype (range =  2^64 - 2^53 + 3) and for NAN -> (2^53 - 2) distinct “Not-a-Number” values 
+//BigInt used for large numbers such as trade numbers or so
+let isLoggedIn = true // boolean datatype = true or false
+let state = null //null -> standalone value, representation of empty value or has exactly one value, called null.
 let marks; //undefined -> when value of any variable is not defined 
 //symbol -> unique
-//object 
+//object -> An Object is logically a collection of properties
 
 
 
