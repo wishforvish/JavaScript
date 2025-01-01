@@ -27,3 +27,4 @@ console.log(undefined < 0);    //false
 // === this strictly compares with datatypes 
 console.log("2" === 2); //false
 
+
