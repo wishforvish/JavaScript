@@ -61,7 +61,7 @@ const myFunction = function(){
     console.log("Hello World")
 } // how to store a function in a variable
 
-console.log(typeof myFunction); // the type of the function above decalred is "function" but we call them "object function"
+console.log(typeof myFunction); // the datatype of the function above decalred is "function" but we call them "object function"
 
 
 //------------------------------------------------------------------------
