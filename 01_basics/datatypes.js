@@ -1,26 +1,33 @@
 "use strict";
  /* treat all JS code as newer version , treats all the older version code as new version, also we don't really have to write this line since JS automatically does its work  */
 
-
  // alert("hello") 
- /*here we're using node js not browser so no pop up of alert message */
 
- //maintain the code readability high and no need to use semicolon ; all the time
+ /*here we're using node js and not a browser, so no pop up box of alert message will be displayed as it may display in browser*/
+
+ //maintain the code readability high
+ //no need to use semicolon ; all the time
 
 let name = "vish" //string datatype ""; 2^53 - 1 elements
 let age = 21 //number datatype (range =  2^64 - 2^53 + 3) and for NAN -> (2^53 - 2) distinct “Not-a-Number” values 
 let isLoggedIn = true // boolean datatype = true or false
-let state = null //null -> standalone value, representation of empty value or has exactly one value, called null.
+let state = null //null -> standalone value, representation of empty value or has exactly one value, called null. ex: temperature
 let marks; //undefined -> when value of any variable is not defined 
 
-//BigInt used for large numbers such as scientific values or trade numbers so on. Ex- 9837472638489
-//symbol -> used to make any value unique
-//object -> An Object is logically a collection of properties
+const bigNumber = 24637267956624572n //BigInt used for large numbers such as scientific values or trade numbers so on. Here 'n' represents that the number is a bigInt value
+
+//object -> An Object is logically a collection of properties.
+//symbol -> used to make any value unique, ex-
+const id = Symbol('123')
+const anotherId = Symbol('123')
+//here in Symbol even if we pass same value in, it'll not be equal to eachother
+console.log(id == anotherId); //false 
 
 
-
-//two ways we can see the type of a data
-/*
+/* 
+How to identify any data or value's datatype ??
+Ans: using "typeof" function
+     We can use this in two ways:-
 1)Directly specifying
 2)Using the variables assigned
 */
@@ -28,6 +35,36 @@ console.log(typeof "rama")
 console.log(typeof age)
 console.log(typeof null) //o/p: object
 console.log(typeof undefined) // o/p: undefined
+
+
+// Array, Ojects, Functions
+
+const heros = ["Ram", "Shiva", "Hanuman"]; //array
+// ---------------------------------------------------------------
+//object 
+
+{
+    Fname = "Vish",
+    age = 21;
+} // object 
+// we can store the same object in variable also 
+let myObj = {
+    Fname = "Vish",
+    age = 21,
+}
+// ---------------------------------------------------------------
+//function
+
+function(){} //function definition
+
+const myFunction = function(){
+    console.log("Hello World")
+} // how to store a function in a variable
+
+console.log(typeof myFunction); // the type of the function above decalred is "function" but we call them "object function"
+
+
+//------------------------------------------------------------------------
 
 
 /* Summary of Datatypes
@@ -41,7 +78,7 @@ console.log(typeof undefined) // o/p: undefined
 
      1) Array: Represents a list-like collection of values, indexed by numbers (integer indices). Ex- [1,2,3,4]
 
-     2) Objects: Represents a collection of key-value pairs(properties and methods). Ex- {name: "John", age: 30}
+     2) Objects: Always inside curly braces { }, in key-value pairs(properties and methods). Ex- {name: "John", age: 30}
 
      3) Functions: Represents a reusable block of code that can be invoked or called with arguments. Ex- function add(x,y) {return x+y;}
 ------------------------------------------------------------------------
@@ -61,9 +98,6 @@ JavaScript's dynamic typing allows for more flexibility but can lead to potentia
 Static typing, on the other hand, provides better type safety at the cost of some initial verbosity (using too many words) and strictness. 
 ------------------------------------------------------------------------
 
--> 
-
-
-
+-> Return type of all the non-primitive or reference type datatypes is always "Object"
 
 */
