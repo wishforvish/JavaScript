@@ -36,26 +36,34 @@ console.log(typeof age)
 console.log(typeof null) //o/p: object
 console.log(typeof undefined) // o/p: undefined
 
+//------------------------------------------------------
+
+
+// -> Return type of all the non-primitive or reference type datatypes is always "Object"
+
 
 // Array, Ojects, Functions
 
-const heros = ["Ram", "Shiva", "Hanuman"]; //array
+//array
+const heros = ["Ram", "Shiva", "Hanuman"]; 
 // ---------------------------------------------------------------
 //object 
 
-{
-    Fname = "Vish",
-    age = 21;
-} // object 
+// {
+//     name1 = "Vish",
+//     age = 21;
+// }
+
+
 // we can store the same object in variable also 
 let myObj = {
-    Fname = "Vish",
-    age = 21,
+    name : "Vish",
+    age : 21,
 }
 // ---------------------------------------------------------------
 //function
 
-function(){} //function definition
+// function(){} //function definition
 
 const myFunction = function(){
     console.log("Hello World")
@@ -98,6 +106,43 @@ JavaScript's dynamic typing allows for more flexibility but can lead to potentia
 Static typing, on the other hand, provides better type safety at the cost of some initial verbosity (using too many words) and strictness. 
 ------------------------------------------------------------------------
 
--> Return type of all the non-primitive or reference type datatypes is always "Object"
-
 */
+
+/* Two types of memory: 
+             1)Stack       2)Heap
+   1)
+    -> Stack is used for primitive datatypes
+    -> We get a copy of the variable declared here
+
+   2)
+    -> Heap is used for non-primitive or reference datatypes
+    -> In this the original value gets changed if we change anything, since it gives the reference of the variable
+*/
+
+let myName = "vishandvish"
+
+let anotherName = myName
+anotherName = "LemonSodaDrink"
+
+console.log(myName);      //Output: vishandvish
+console.log(anotherName); //Output: LemonSodaDrink
+
+//here the output is different because we have used primitive datatype and it only holds a copy of it and will not change the original value
+
+
+//--------------------------------------------------
+
+
+let userOne = {
+    email: "user@gmail.com",
+    upi: "user@ybl"
+}
+
+let userTwo = userOne // here we are using reference 
+
+userTwo.email = "vish@gmail.com"
+
+console.log(userOne.email);  // output: vish@gmail.com
+console.log(userTwo.email);  // output: vish@gmail.com
+
+// here both the output is same because it's a non-primitive datatype that we have used and the reference changes the original value as well 
