@@ -67,3 +67,6 @@ gameCounter++;    // ++gameCounter
 console.log(gameCounter); //101, same output for both but there is an internal change that happens 
 
 
+// -----------------------------------------------------
+
+
