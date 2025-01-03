@@ -64,7 +64,7 @@ num1 = num2 = num3 = 2 + 2  //not ok coz not so readability
 
 let gameCounter = 100
 gameCounter++;    // ++gameCounter
-console.log(gameCounter); //101, same output for both but there is an internal change that happens 
+console.log(gameCounter); //101, same output for both but there is an internal change that happens and that depends on the prefix and postfix internal changes
 
 
 // -----------------------------------------------------
