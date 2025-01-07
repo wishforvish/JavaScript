@@ -38,8 +38,9 @@ console.log(Math.ceil(4.2)); //5
 console.log(Math.min(3,4,5,6)); //3
 console.log(Math.max(3,4,5,6)); //6
 
-console.log(Math.random());
-console.log((Math.random()*10) + 1); //so we do not get the 0.298734826 or 0.7567645763 so on, i.e., we get numbers between 1-10
+
+console.log(Math.random()); //0.4657367648746 , here it always gives output between 0 and 1, why? computer understands only 0 and 1
+console.log((Math.random()*10) + 1); //0.364576384756,  we multiply *10 so that the digits shift (3.64576384756) but what if we have 0.03246756 random number, then the output will still be 0.3246756, so hence we add +1 , then the output will be 1.3246756
 
 console.log(Math.floor(Math.random()*10) + 1); // single digit output basically rounds off to the lower value
 
