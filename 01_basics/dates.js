@@ -23,3 +23,33 @@ console.log(myDate.toJSON()); //2025-01-07T13:29:19.922Z
 
 console.log(typeof myDate);  // "object" 
 
+let myCreatedDate = new Date(2025,0,23) //(Year starts from 0, JAN)
+console.log(myCreatedDate.toDateString());//Thu Jan 23 2025 
+
+let myCreatedDate1 = new Date(2025,0,23,5,3) //year, month, date, (time) hours, seconds
+console.log(myCreatedDate1.toLocaleString()); //1/23/2025, 5:03:00 AM
+
+let myCreatedDate2 = new Date("2025-01-24") 
+console.log(myCreatedDate2.toLocaleString()); //1/24/2025, 12:00:00 AM
+
+let myCreatedDate3 = new Date("01-24-2025") 
+console.log(myCreatedDate3.toLocaleString()); //1/24/2025, 12:00:00 AM
+
+let myTimeStamp = Date.now()
+console.log(myTimeStamp); //1736327440525, milliseconds
+
+console.log(myCreatedDate.getTime()); //1737590400000, to compare milliseconds to the date assigned
+
+console.log(Math.floor(Date.now()/1000)); // gives seconds values and here if we directly divide with 1000 then we get decimal value so we're using Math.floor
+
+
+let newDate = new Date()
+console.log(newDate);
+console.log(newDate.getMonth() + 1); //1, since it starts from 0, so that users don't get confused 1 is added
+console.log(newDate.getDay());//3
+
+
+const dates = newDate.toLocaleDateString('default', {
+    weekday: "long",
+}) //can customize, here weekday: "long" tells the method to include the full name of the weekday (e.g., "Monday", "Tuesday") in the output
+console.log(dates);//Wednesday
